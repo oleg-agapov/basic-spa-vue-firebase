@@ -41,7 +41,7 @@ export const store = new Vuex.Store({
       commit('setLoading', true)
       firebase.auth().signInWithEmailAndPassword(payload.email, payload.password)
       .then(firebaseUser => {
-        commit('setUser', {email: firebaseUser.email})
+        commit('setUser', {email: firebaseUser.user.email})
         commit('setLoading', false)
         commit('setError', null)
         router.push('/home')
