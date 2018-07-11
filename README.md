@@ -2,6 +2,10 @@
 
 > A Vue.js project
 
+Full tutorial is here:
+* part 1 - https://medium.com/@oleg.agapov/basic-single-page-application-using-vue-js-and-firebase-part-1-9e4c0c11a228
+* part 2 - https://medium.com/@oleg.agapov/basic-single-page-application-using-vue-js-and-firebase-part-2-143a3084266f
+
 ## Build Setup
 
 ``` bash
