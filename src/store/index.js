@@ -27,29 +27,29 @@ export const store = new Vuex.Store({
     userSignUp ({commit}, payload) {
       commit('setLoading', true)
       firebase.auth().createUserWithEmailAndPassword(payload.email, payload.password)
-      .then(firebaseUser => {
-        commit('setUser', {email: firebaseUser.user.email})
-        commit('setLoading', false)
-        router.push('/home')
-      })
-      .catch(error => {
-        commit('setError', error.message)
-        commit('setLoading', false)
-      })
+        .then(firebaseUser => {
+          commit('setUser', {email: firebaseUser.user.email})
+          commit('setLoading', false)
+          router.push('/home')
+        })
+        .catch(error => {
+          commit('setError', error.message)
+          commit('setLoading', false)
+        })
     },
     userSignIn ({commit}, payload) {
       commit('setLoading', true)
       firebase.auth().signInWithEmailAndPassword(payload.email, payload.password)
-      .then(firebaseUser => {
-        commit('setUser', {email: firebaseUser.user.email})
-        commit('setLoading', false)
-        commit('setError', null)
-        router.push('/home')
-      })
-      .catch(error => {
-        commit('setError', error.message)
-        commit('setLoading', false)
-      })
+        .then(firebaseUser => {
+          commit('setUser', {email: firebaseUser.user.email})
+          commit('setLoading', false)
+          commit('setError', null)
+          router.push('/home')
+        })
+        .catch(error => {
+          commit('setError', error.message)
+          commit('setLoading', false)
+        })
     },
     autoSignIn ({commit}, payload) {
       commit('setUser', {email: payload.email})
