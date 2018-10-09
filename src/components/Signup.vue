@@ -19,6 +19,7 @@
                 id="email"
                 type="email"
                 v-model="email"
+                autocomplete="username email"
                 required></v-text-field>
             </v-flex>
             <v-flex>
@@ -28,6 +29,7 @@
                 id="password"
                 type="password"
                 v-model="password"
+                autocomplete="new-password"
                 required></v-text-field>
             </v-flex>
             <v-flex>
@@ -38,6 +40,7 @@
                 type="password"
                 required
                 v-model="passwordConfirm"
+                autocomplete="new-password"
                 :rules="[comparePasswords]"
                 ></v-text-field>
             </v-flex>

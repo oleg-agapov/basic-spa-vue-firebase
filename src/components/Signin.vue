@@ -19,6 +19,7 @@
                 id="email"
                 type="email"
                 v-model="email"
+                autocomplete="username email"
                 required></v-text-field>
             </v-flex>
             <v-flex>
@@ -28,6 +29,7 @@
                 id="password"
                 type="password"
                 v-model="password"
+                autocomplete="current-password"
                 required></v-text-field>
             </v-flex>
             <v-flex class="text-xs-center" mt-5>
