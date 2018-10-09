@@ -45,6 +45,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
+    new webpack.LoaderOptionsPlugin({ options: {} }),
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),
@@ -82,7 +83,7 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+          messages: [`Your application is running here: http:\/\/${devWebpackConfig.devServer.host}:${port}`],
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()
